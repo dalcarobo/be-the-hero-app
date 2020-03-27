@@ -1,7 +1,7 @@
 const conn = require('../dtbs/conn');
 
-module.export = {
-    async create(request, response) {
+module.exports = {
+    async index(request, response) {
         const { id } = request.body;
 
         const ong = await conn('ongs').select('name').where('id', id).first();
